@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirBnB</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-image: url(images/background.jpg);
+        height: 880px;
+      }
+
+      .center-cover-img {
+        background-size: cover;
+        background-position: center;
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        padding: 20px 20px;
+      }
+
+      .logo {
+        color: white;
+        font-size: 35px;
+      }
+
+      .nav-menu ul {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        list-style-type: none;
+        grid-gap: 30px;
+        color: white;
+        font-weight: 800;
+      }
+
+      .search-box {
+        display: inline-block;
+        background-color: white;
+        width: 430px;
+        padding: 20px 30px;
+        position: relative;
+        left: 50px;
+        top: 10px;
+        border-radius: 6px;
+        box-shadow: 0 10px 10px 0 black;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      .search-explain {
+        padding: 10px 0;
+        font-size: 30px;
+        font-weight: 800;
+        color: rgb(75, 75, 75);
+      }
+
+      .search-label {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 10px;
+      }
+
+      .search-input {
+        padding: 10px;
+        height: 40px;
+        width: 100%;
+        font-size: 15px;
+      }
+
+      .search-button {
+        display: grid;
+        justify-content: end;
+        padding: 20px 0;
+      }
+
+      .search-button button {
+        background-color: #ff5a5f;
+        color: white;
+        width: 70px;
+        height: 45px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 6px;
+        border: 0;
+        cursor: pointer;
+      }
+
+      main {
+        margin: 30px 80px;
+      }
+
+      section {
+        margin: 30px 0;
+      }
+      
+      .section-title {
+        font-size: 25px;
+        font-weight: 800;
+        color: rgb(75, 75, 75);
+      }
+
+      .category-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+
+      .category-card {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        border: 1px solid rgb(245, 239, 239);
+        border-radius: 6px;
+        box-shadow: 0 0 3px 0 rgb(214, 184, 184);
+      }
+
+      .category-img {
+        height: 70px;
+      }
+
+      .category-name {
+        display: grid;
+        align-items: center;
+        font-weight: 600;
+        margin-left: 10px;
+      }
+
+      .wide-area-img-1{
+        border-radius: 20px;
+        margin: 40px 0;
+        background-image: url(images/wide1.jpg);
+        height: 350px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header class="center-cover-img">
+      <nav>
+        <!-- 로고 -->
+        <div class="logo">
+          <svg
+            viewBox="0 0 1000 1000"
+            role="presentation"
+            aria-hidden="true"
+            focusable="false"
+            style="
+              height: 1em;
+              width: 1em;
+              display: inline-block;
+              fill: currentcolor;
+            "
+          >
+            <path
+              d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"
+            ></path>
+          </svg>
+        </div>
+        <!-- 메뉴 -->
+        <div class="nav-menu">
+          <ul>
+            <li>호스트가 되어보세요</li>
+            <li>도움말</li>
+            <li>회원가입</li>
+            <li>로그인</li>
+          </ul>
+        </div>
+      </nav>
+      <section>
+        <div class="search-box">
+          <div class="search-explain">
+            특색 있는 숙소와 즐길 <br />
+            거리를 예약하세요.
+          </div>
+
+          <table>
+            <tr>
+              <td colspan="2" class="search-label">목적지</td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="모든 위치"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="search-label">체크인</td>
+              <td class="search-label">체크아웃</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input type="date" class="search-input" />
+              </td>
+              <td>
+                <input type="date" class="search-input" />
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="search-lable">인원</td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <select class="search-input">
+                  <option value="">인원</option>
+                  <option value="">1~2인</option>
+                  <option value="">3~4인</option>
+                  <option value="">5인 이상</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+
+          <div class="search-button">
+            <button>검색</button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section>
+        <div class="section-title">에어비엔비 둘러보기</div>
+        <div class="category-box">
+          <div class="category-card">
+            <div
+              class="category-img center-cover-img"
+              style="background-image: url('images/category1.jpg')"
+            ></div>
+            <div class="category-name">숙소 및 부티크 호텔</div>
+          </div>
+        
+          <div class="category-card">
+            <div
+            class="category-img center-cover-img"
+            style="background-image: url('images/category2.jpg')"
+            ></div>
+            <div class="category-name">트립</div>
+          </div>
+
+          <div class="category-card">
+            <div
+            class="category-img center-cover-img"
+            style="background-image: url('images/category3.jpg')"
+            ></div>
+            <div class="category-name">어드벤쳐</div>
+          </div>
+
+          <div class="category-card">
+            <div
+            class="category-img center-cover-img"
+            style="background-image: url('images/category4.jpg')"
+            ></div>
+            <div class="category-name">레스토랑</div>
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <div
+            class="wide-area-img-1"
+            style="background-image: url('images/wide1.jpg')"
+            ></div>
+      </section>
+    </main>
+  </body>
+</html>

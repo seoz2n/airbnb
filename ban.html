@@ -1,0 +1,126 @@
+<!-- ban.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        max-width: 200px;
+        margin: 20px;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .card-body h3 {
+        margin-top: 0;
+      }
+
+      .card-body p {
+        margin-bottom: 1em;
+      }
+
+      .card-body button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .card-body button:hover {
+        background-color: #3e8e41;
+      }
+
+      #container {
+        display: grid;
+      }
+
+      /* 
+      #container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      } 
+      */
+
+      @media only screen and (min-width: 1025px) {
+        #container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        } 
+      }
+
+      @media only screen and (min-width: 769px) and (max-width: 1024px){
+        #container {
+        grid-template-columns: 1fr 1fr 1fr;
+      } 
+      }
+
+      @media only screen and (max-width: 768px){
+        #container {
+        grid-template-columns: 1fr;
+      } 
+      }
+
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="card">
+        <div class="card-body">
+          <h3>카드 제목</h3>
+          <p>카드 내용</p>
+          <button>버튼</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>카드 제목</h3>
+          <p>카드 내용</p>
+          <button>버튼</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>카드 제목</h3>
+          <p>카드 내용</p>
+          <button>버튼</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>카드 제목</h3>
+          <p>카드 내용</p>
+          <button>버튼</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>카드 제목</h3>
+          <p>카드 내용</p>
+          <button>버튼</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3>카드 제목</h3>
+          <p>카드 내용</p>
+          <button>버튼</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
