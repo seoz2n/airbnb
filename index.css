@@ -5,7 +5,7 @@
   }
 
   header {
-    background-image: url(images/background.jpg);
+    background-image: url("./images/background.jpg");
     height: 880px;
   }
 
@@ -131,7 +131,7 @@
   .wide-area-img-1{
     border-radius: 20px;
     margin: 40px 0;
-    background-image: url(images/wide1.jpg);
+    background-image: url(./images/wide1.jpg);
     height: 350px;
   }
 
@@ -147,7 +147,7 @@
   }
 
   .wide-area-img-2 {
-    background-image: url("/images/wide2.png");
+    background-image: url("./images/wide2.png");
     height: 300px;
     margin: 20px 0;
   }
